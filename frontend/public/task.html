@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digilio Roadmap | AI-Agentic ERP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+        .phase-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .phase-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900 min-h-screen custom-scrollbar">
+
+    <!-- Sticky Header -->
+    <header class="glass sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-slate-900">Project Digilio</h1>
+                    <p class="text-xs font-medium text-slate-500 uppercase tracking-widest">AI-Agentic ERP Roadmap</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <div class="text-right hidden sm:block">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-0.5">Project Status</p>
+                    <div class="flex items-center gap-2">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">UAT Ready</span>
+                        <span class="text-sm font-semibold text-slate-700">75% Complete</span>
+                    </div>
+                </div>
+                <div class="h-10 w-[1px] bg-slate-200 hidden sm:block"></div>
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md transition-all">
+                    Export JSON
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-10">
+        
+        <!-- Stats Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                <p class="text-sm font-medium text-slate-500 mb-1">Total Phases</p>
+                <h3 class="text-2xl font-bold text-slate-900">11</h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                <p class="text-sm font-medium text-slate-500 mb-1">Total Tasks</p>
+                <h3 class="text-2xl font-bold text-slate-900">42</h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                <p class="text-sm font-medium text-slate-500 mb-1">Completed</p>
+                <h3 class="text-2xl font-bold text-green-600">32</h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                <p class="text-sm font-medium text-slate-500 mb-1">Remaining</p>
+                <h3 class="text-2xl font-bold text-indigo-600">10</h3>
+            </div>
+        </div>
+
+        <!-- Phase Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            
+            <!-- Phase 0: Complete -->
+            <div class="phase-card bg-indigo-50/30 rounded-2xl border border-indigo-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">0</div>
+                    <span class="text-[10px] font-bold text-indigo-500 uppercase">Infrastructure</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">Project Setup</h2>
+                <div class="w-full bg-slate-200 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-green-500 h-full w-[100%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Initialize Frontend: Next.js + TS + Tailwind + Shadcn</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Initialize Backend: FastAPI project structure</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Database Setup (Postgres, Redis, Meili)</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Dockerization: Complete environment</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 1: Complete -->
+            <div class="phase-card bg-indigo-50/30 rounded-2xl border border-indigo-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">1</div>
+                    <span class="text-[10px] font-bold text-indigo-500 uppercase">Layout</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">UI Foundation</h2>
+                <div class="w-full bg-slate-200 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-green-500 h-full w-[100%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Split Layout (75:25) & Sidebar</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Multi-Tab / Multi-Session Management</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Global State Management (Zustand)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 2: Complete -->
+            <div class="phase-card bg-indigo-50/30 rounded-2xl border border-indigo-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">2</div>
+                    <span class="text-[10px] font-bold text-indigo-500 uppercase">Intelligence</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">Omni-Command & NLP</h2>
+                <div class="w-full bg-slate-200 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-green-500 h-full w-[100%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Intent Recognition & Entity Extraction</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">AI "Thought Process" Display</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 3: Complete -->
+            <div class="phase-card bg-indigo-50/30 rounded-2xl border border-indigo-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">3</div>
+                    <span class="text-[10px] font-bold text-indigo-500 uppercase">Automation</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">Agentic UI Engine</h2>
+                <div class="w-full bg-slate-200 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-green-500 h-full w-[100%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Schema-Driven Dynamic Forms</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">"Ghost Filling" & Auto-Navigation</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 4: Complete -->
+            <div class="phase-card bg-indigo-50/30 rounded-2xl border border-indigo-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">4</div>
+                    <span class="text-[10px] font-bold text-indigo-500 uppercase">Backend</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">Core Business Logic</h2>
+                <div class="w-full bg-slate-200 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-green-500 h-full w-[100%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Tenant-Specific Schema logic</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">CRUD APIs & Audit Trails</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 5: Complete -->
+            <div class="phase-card bg-indigo-50/30 rounded-2xl border border-indigo-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">5</div>
+                    <span class="text-[10px] font-bold text-indigo-500 uppercase">Safety</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">Digital Guardrails</h2>
+                <div class="w-full bg-slate-200 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-green-500 h-full w-[100%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">AI-Aware RBAC (Permission Layer)</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Validation Gatekeepers (Pydantic)</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">"No-Shell Policy" & User Confirmation</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 6: Complete -->
+            <div class="phase-card bg-indigo-50/30 rounded-2xl border border-indigo-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">6</div>
+                    <span class="text-[10px] font-bold text-indigo-500 uppercase">RAG</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">Knowledge & OCR</h2>
+                <div class="w-full bg-slate-200 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-green-500 h-full w-[100%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">RAG Pipeline (pgvector + Flexible Embed)</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">OCR Integration (PaddleOCR + MinIO)</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Drag-and-Drop / File-to-Form via Chat</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 7: Complete -->
+            <div class="phase-card bg-indigo-50/30 rounded-2xl border border-indigo-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">7</div>
+                    <span class="text-[10px] font-bold text-indigo-500 uppercase">Consulting</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">AI Onboarding</h2>
+                <div class="w-full bg-slate-200 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-green-500 h-full w-[100%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">AI Consultant (Interview & Generate)</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">Visual Form Builder (Blueprint Editor)</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 bg-green-500 rounded flex items-center justify-center text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="line-through opacity-50">AI-driven Data Migration Agent (CSV)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 8 -->
+            <div class="phase-card bg-white rounded-2xl border border-slate-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-600 font-bold">8</div>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Voice</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">Multimodal</h2>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-indigo-500 h-full w-[0%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 border-2 border-slate-200 rounded flex items-center justify-center"></div>
+                        <span>Whisper (Local) Voice-to-Text</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 border-2 border-slate-200 rounded flex items-center justify-center"></div>
+                        <span>Connect Voice to Command Center</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 9 -->
+            <div class="phase-card bg-white rounded-2xl border border-slate-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-600 font-bold">9</div>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Ops</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">Lifecycle Mgmt</h2>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-indigo-500 h-full w-[0%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 border-2 border-slate-200 rounded flex items-center justify-center"></div>
+                        <span>Sandbox vs Production Mode</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 border-2 border-slate-200 rounded flex items-center justify-center"></div>
+                        <span>Blueprint Versioning (Draft/Apply)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 10 -->
+            <div class="phase-card bg-white rounded-2xl border border-slate-100 shadow-sm p-6 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-600 font-bold">10</div>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">API</span>
+                </div>
+                <h2 class="text-lg font-bold text-slate-900 mb-2">Connectivity</h2>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mb-6 overflow-hidden">
+                    <div class="bg-indigo-500 h-full w-[0%]"></div>
+                </div>
+                <ul class="space-y-3 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600">
+                        <div class="mt-0.5 w-5 h-5 flex-shrink-0 border-2 border-slate-200 rounded flex items-center justify-center"></div>
+                        <span>Standard Webhook & API Gen</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 py-12 border-t border-slate-200 mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2">
+            <div class="w-6 h-6 bg-slate-200 rounded-lg"></div>
+            <span class="text-sm font-semibold text-slate-400 uppercase tracking-widest">Digilio ERP © 2026</span>
+        </div>
+        <div class="flex gap-8">
+            <a href="#" class="text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors">Documentation</a>
+            <a href="#" class="text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors">API Reference</a>
+            <a href="#" class="text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors">Support</a>
+        </div>
+    </footer>
+
+</body>
+</html>
