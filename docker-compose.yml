@@ -1,0 +1,75 @@
+services:
+  db:
+    image: ankane/pgvector:latest
+    container_name: digilio_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - digilio_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: digilio_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - digilio_network
+
+  meilisearch:
+    image: getmeili/meilisearch:latest
+    container_name: digilio_meili
+    restart: always
+    environment:
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
+      MEILI_NO_ANALYTICS: "true"
+    ports:
+      - "7700:7700"
+    volumes:
+      - meili_data:/meili_data
+    networks:
+      - digilio_network
+
+  minio:
+    image: minio/minio:latest
+    container_name: digilio_minio
+    restart: always
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    networks:
+      - digilio_network
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: digilio_ollama
+    restart: always
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - digilio_network
+
+networks:
+  digilio_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  meili_data:
+  minio_data:
+  ollama_data:

@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+env/
+.env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Next.js / React
+.next/
+out/
+build/
+dist/
+.cache/
+
+# Logs
+*.log
+logs/
+
+# Git
+.git/
+
+# Others
+.DS_Store
+.vercel
+.vscode/
+.idea/
